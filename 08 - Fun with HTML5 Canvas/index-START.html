@@ -48,7 +48,10 @@ function draw(e){
     }
 
     if(dirrection){
-      ctx.lineWidth++;
+      if(ctx.lineWidth >=30){
+        ctx.lineWidth += 0.2
+      } else {
+      ctx.lineWidth++;}
     } else {
       ctx.lineWidth--;
     }

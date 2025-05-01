@@ -96,7 +96,57 @@
     </div>
   </div>
 
-<script>
+<script> 
+/* APIE 
+
+Analyze - The question is asking me if I know two things. How do I know if someone is holding the shift key, 
+and how do I know the position of an Item in a list
+
+Plan - Use an event listener to find if someone is holding down the shift key,
+and grab the "inbox" div to count all of it's children. If some one holds down the shift key and selects two boxes,
+grab the indexes of the boxes and apply the "checked" class to all of the range.
+
+Impliment -
+
+Examine - 
+
+
+*/
+
+const list = document.querySelector(`.inbox`);
+
+console.log(list.children[2]);
+
+let shiftHeld = false;
+
+function groupSelect(e){
+  if(shiftHeld = false) return;
+  //select the boxes
+}
+
+function handleKeydown(e){
+  if (e.key != "Shift"){
+    return
+  } else {
+    shiftHeld = true
+  }
+  console.log(shiftHeld)
+}
+
+function handleKeyup(e){
+  if (e.key != "Shift"){
+    return
+  } else {
+    shiftHeld = false
+  }
+  console.log(shiftHeld)
+}
+
+window.addEventListener("keydown",handleKeydown)
+window.addEventListener("keyup",handleKeyup)
+
+const listItems = window.querySelectorAll(`.item`)
+
 </script>
 </body>
 </html>
